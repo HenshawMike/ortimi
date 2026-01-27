@@ -1,73 +1,145 @@
-# Welcome to your Lovable project
+# ORTIMI
 
-## Project info
+**ORTIMI** is a minimal, single-page mathematics tutoring website designed to convert exam-season pressure into booked one-on-one tutoring sessions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The platform focuses on **mystery, authority, and clarity**, targeting students who struggle with mathematics and need focused, personal help before examinations.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✦ Concept
 
-**Use Lovable**
+Most students don’t fail mathematics because they are incapable —  
+they fail because they were taught to memorize instead of understand.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+ORTIMI exists to fix that.
 
-Changes made via Lovable will be committed automatically to this repo.
+The site is intentionally minimal and dark-themed to project confidence, seriousness, and intellectual depth.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✦ Core Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Single-page scroll-based layout (no page reloads)
+- Smooth navigation between sections
+- Mystery-driven copywriting
+- One-on-one session booking
+- Fixed pricing: **₦3,000 per session**
+- Booking confirmation via payment
+- WhatsApp contact after booking
+- Mobile-first and exam-season optimized
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✦ Design System
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Color Palette
+- Black: `#0B0B0B`
+- Burgundy: `#5A0F1B`
+- Soft Burgundy (hover/glow): `#7A1A2A`
+- White: `#FFFFFF`
+- Muted Gray: `#A1A1AA`
 
-# Step 3: Install the necessary dependencies.
-npm i
+### UI Style
+- Dark, minimal, intellectual
+- No bright colors
+- No playful illustrations
+- Subtle animations only
+- Calm, confident tone
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## ✦ Page Structure (Single Page)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Hero Section**
+   - Strong authority-driven headline
+   - Limited availability messaging
+   - Primary booking call-to-action
 
-**Use GitHub Codespaces**
+2. **Mystery / Authority Section**
+   - Emphasis on patterns, thinking, and focus
+   - No over-explanation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **How It Works**
+   - Simple three-step process:
+     - Choose session
+     - Pay ₦3,000
+     - Attend one-on-one tutoring
 
-## What technologies are used for this project?
+4. **Pricing**
+   - Single clear pricing card
+   - Scarcity-based messaging
 
-This project is built with:
+5. **Booking**
+   - Modal-based booking form
+   - Payment confirmation
+   - WhatsApp follow-up
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+6. **Footer**
+   - Minimal branding
+   - No social clutter
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## ✦ Tech Stack
 
-## Can I connect a custom domain to my Lovable project?
+- **Next.js (App Router)**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **Framer Motion** (subtle animations)
+- **Paystack** (payments)
+- **Supabase or lightweight database** (booking storage)
+- **Vercel** (deployment)
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## ✦ Navigation Behavior
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Sticky navigation bar
+- Clicking navigation links scrolls smoothly to sections
+- No multi-page routing
+- Booking opens a modal dialog
+
+---
+
+## ✦ Target Audience
+
+- Students preparing for examinations
+- Students struggling with mathematics
+- Students seeking personal, focused tutoring
+- School environments with high exam pressure
+
+---
+
+## ✦ Business Model
+
+- Physical, one-on-one tutoring
+- Fixed per-session pricing
+- Scarcity-driven availability
+- Word-of-mouth and WhatsApp distribution
+
+---
+
+## ✦ Philosophy
+
+ORTIMI does not promise guaranteed grades.
+
+It promises:
+- Focus
+- Understanding
+- Better thinking under exam conditions
+
+---
+
+## ✦ Status
+
+This project is designed to be:
+- Fast to deploy
+- Easy to maintain
+- Highly conversion-focused during exam season
+
+---
+
+## ✦ License
+
+Private / Educational Use  
+All rights reserved.
