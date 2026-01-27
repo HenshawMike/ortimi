@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import FloatingSymbols from "./FloatingSymbols";
 
 const steps = [
   { number: "01", text: "Choose a session" },
@@ -31,13 +32,13 @@ const HowItWorksSection = () => {
     <section
       id="sessions"
       ref={sectionRef}
-      className="py-32 relative"
+      className="py-32 relative overflow-hidden"
     >
+      <FloatingSymbols />
       <div className="container mx-auto px-6">
         <h2
-          className={`font-display text-3xl md:text-4xl font-semibold text-center mb-20 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`font-display text-3xl md:text-4xl font-semibold text-center mb-20 transition-all duration-1000 ease-in-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-95"
+            }`}
         >
           How It Works
         </h2>
@@ -46,14 +47,13 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`flex items-start gap-6 transition-all duration-700 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${(index + 1) * 150}ms` }}
+              className={`flex items-start gap-6 transition-all duration-1000 ease-in-out ${isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-12 scale-95"
+                }`}
+              style={{ transitionDelay: `${(index + 1) * 250}ms` }}
             >
-              <span className="font-display text-primary text-2xl md:text-3xl font-semibold">
+              <span className="font-display text-primary text-2xl md:text-3xl font-semibold transition-all duration-1000 ease-in-out">
                 {step.number}
               </span>
               <div className="flex-1 pt-1">
@@ -61,7 +61,11 @@ const HowItWorksSection = () => {
                   {step.text}
                 </p>
                 {index < steps.length - 1 && (
-                  <div className="w-px h-12 bg-border ml-0 mt-6" />
+                  <div
+                    className={`w-px h-12 bg-border ml-0 mt-6 transition-all duration-1000 ease-in-out ${isVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
+                      }`}
+                    style={{ transitionDelay: `${(index + 1) * 250 + 200}ms` }}
+                  />
                 )}
               </div>
             </div>
@@ -69,10 +73,9 @@ const HowItWorksSection = () => {
         </div>
 
         <p
-          className={`text-muted-foreground text-center mt-16 text-lg max-w-xl mx-auto transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{ transitionDelay: "600ms" }}
+          className={`text-muted-foreground text-center mt-16 text-lg max-w-xl mx-auto transition-all duration-1000 ease-in-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-95"
+            }`}
+          style={{ transitionDelay: "1000ms" }}
         >
           Physical tutoring. Exam-oriented. Personal attention.
         </p>

@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageCircle, Check } from "lucide-react";
+import FloatingSymbols from "./FloatingSymbols";
 
 interface BookingDialogProps {
   open: boolean;
@@ -52,7 +53,8 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="bg-card border-border max-w-md">
+      <DialogContent className="bg-card border-border max-w-md overflow-hidden">
+        <FloatingSymbols />
         {!isSubmitted ? (
           <>
             <DialogHeader>

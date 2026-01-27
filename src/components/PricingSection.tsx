@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import FloatingSymbols from "./FloatingSymbols";
 
 interface PricingSectionProps {
   onBookClick: () => void;
@@ -38,13 +39,13 @@ const PricingSection = ({ onBookClick }: PricingSectionProps) => {
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-32 relative"
+      className="py-32 relative overflow-hidden"
     >
+      <FloatingSymbols />
       <div className="container mx-auto px-6">
         <div
-          className={`max-w-md mx-auto transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`max-w-md mx-auto transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <Card className="bg-card border-border hover:border-primary/50 transition-all duration-500 overflow-hidden">
             <CardHeader className="text-center pb-6 pt-10">
