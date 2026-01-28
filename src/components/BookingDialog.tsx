@@ -103,8 +103,12 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                       <div className="bg-secondary/50 p-4 rounded-lg border border-primary/20 space-y-2 mt-2">
                         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Transfer to:</p>
                         <div className="flex justify-between items-center">
+                          <span className="text-sm font-medium">Bank:</span>
+                          <span className="text-white font-bold">FCMB</span>
+                        </div>
+                        <div className="flex justify-between items-center">
                           <span className="text-sm font-medium">Account Number:</span>
-                          <span className="text-primary font-bold">3910429016</span>
+                          <span className="text-white font-bold text-lg">3910429016</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-sm font-medium">Account Name:</span>
