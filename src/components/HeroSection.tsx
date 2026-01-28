@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+noimport { Button } from "@/components/ui/button";
 import FloatingSymbols from "./FloatingSymbols";
 
 interface HeroSectionProps {
@@ -15,7 +15,7 @@ const HeroSection = ({ onBookClick }: HeroSectionProps) => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight max-w-5xl mx-auto mb-8 opacity-0 animate-fade-in-up">
-          Exams are near , and math is the your only pressure stop worrying,{" "}
+          Exams are near , and math is  your only pressure stop worrying,{" "}
           <span className="text-primary"> We can fix that.</span>
         </h1>
 
