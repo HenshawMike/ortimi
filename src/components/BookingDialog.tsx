@@ -92,7 +92,7 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                     setFormData({ ...formData, course: e.target.value })
                   }
                   className="bg-secondary border-border focus:border-primary"
-                  placeholder="e.g., SS3, 100 Level, WAEC"
+                  placeholder="e.g., Year 1, Year 2, Year 3, Year 4"
                 />
               </div>
 
