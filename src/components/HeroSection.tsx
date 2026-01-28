@@ -1,4 +1,4 @@
-noimport { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import FloatingSymbols from "./FloatingSymbols";
 
 interface HeroSectionProps {
