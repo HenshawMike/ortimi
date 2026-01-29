@@ -56,9 +56,8 @@ const PricingSection = ({ onBookClick }: PricingSectionProps) => {
               </h3>
               <div className="flex flex-col items-center justify-center gap-1">
                 {isReferred && (
-                  <div className="flex items-center gap-1.5 px-3 py-1 bg-primary/10 rounded-full mb-2 border border-primary/20 animate-pulse">
-                    <Sparkles className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-wider">Referral Discount Applied</span>
+                  <div className="flex items-center gap-1.5 px-3 py-1 bg-primary rounded-full mb-3 border border-primary/50 shadow-[0_0_15px_rgba(184,24,64,0.3)]">
+                    <span className="text-[10px] font-bold text-primary-foreground uppercase tracking-wider">Referral Discount Applied</span>
                   </div>
                 )}
                 <div className="flex items-baseline gap-2">
@@ -67,7 +66,7 @@ const PricingSection = ({ onBookClick }: PricingSectionProps) => {
                       <span className="font-display text-2xl text-muted-foreground line-through opacity-50">
                         ₦{originalPrice.toLocaleString()}
                       </span>
-                      <span className="font-display text-5xl font-bold text-primary drop-shadow-[0_0_15px_rgba(234,30,103,0.3)]">
+                      <span className="font-display text-5xl font-bold text-foreground drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                         ₦{discountedPrice.toLocaleString()}
                       </span>
                     </>

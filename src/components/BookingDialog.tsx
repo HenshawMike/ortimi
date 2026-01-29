@@ -13,12 +13,6 @@ import { MessageCircle, Check, Copy, Share2 } from "lucide-react";
 import FloatingSymbols from "./FloatingSymbols";
 import { useReferral } from "@/hooks/useReferral";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 interface BookingDialogProps {
   open: boolean;
@@ -206,31 +200,22 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                     placeholder="Enter your full name"
                   />
                 </div>
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="payment" className="border-border">
-                    <AccordionTrigger className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                      View Payment Account Details
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="bg-secondary/50 p-4 rounded-lg border border-primary/20 space-y-2 mt-2">
-                        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Transfer to:</p>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium">Bank:</span>
-                          <span className="text-white font-bold">FCMB</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium">Account Number:</span>
-                          <span className="text-white font-bold text-lg">3910429016</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium">Account Name:</span>
-                          <span className="text-sm">Henshaw Mike Ewa</span>
-                        </div>
-                        <p className="text-[10px] text-muted-foreground mt-2 italic">* Please make transfer before confirming booking</p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+                <div className="bg-secondary/50 p-4 rounded-lg border border-primary/20 space-y-2">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Transfer to:</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Bank:</span>
+                    <span className="text-white font-bold">FCMB</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Account Number:</span>
+                    <span className="text-white font-bold text-lg">3910429016</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Account Name:</span>
+                    <span className="text-sm">Henshaw Mike Ewa</span>
+                  </div>
+                  <p className="text-[10px] text-muted-foreground mt-2 italic">* Please make transfer before confirming booking</p>
+                </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="course" className="text-muted-foreground">
@@ -311,7 +296,7 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                 <p className="text-sm"><span className="text-muted-foreground">Name:</span> {formData.fullName}</p>
                 <p className="text-sm"><span className="text-muted-foreground">Course:</span> {formData.course}</p>
                 <p className="text-sm"><span className="text-muted-foreground">Time:</span> {formData.preferredDateTime}</p>
-                <p className="text-sm font-medium text-primary"><span className="text-muted-foreground">Amount:</span> ₦{currentPrice.toLocaleString()} {isReferred && "(10% off applied)"}</p>
+                <p className="text-sm font-medium text-foreground"><span className="text-muted-foreground">Amount:</span> ₦{currentPrice.toLocaleString()} {isReferred && "(10% off applied)"}</p>
               </div>
 
               <div className="bg-primary/5 p-4 rounded-lg border border-primary/20 text-center mb-6">
