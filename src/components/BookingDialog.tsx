@@ -214,6 +214,10 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                     <span className="text-sm font-medium">Account Name:</span>
                     <span className="text-sm">Henshaw Mike Ewa</span>
                   </div>
+                  <div className="flex justify-between items-center py-1 mt-1 border-t border-primary/10">
+                    <span className="text-sm font-medium">Amount to Pay:</span>
+                    <span className="text-white font-bold text-lg">₦{currentPrice.toLocaleString()}</span>
+                  </div>
                   <p className="text-[10px] text-muted-foreground mt-2 italic">* Please make transfer before confirming booking</p>
                 </div>
 
