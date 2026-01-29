@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import FloatingSymbols from "./FloatingSymbols";
+import { useReferral } from "@/hooks/useReferral";
 
 interface PricingSectionProps {
   onBookClick: () => void;
@@ -17,6 +18,7 @@ const features = [
 const PricingSection = ({ onBookClick }: PricingSectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const { isReferred, originalPrice, discountedPrice } = useReferral();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,10 +54,29 @@ const PricingSection = ({ onBookClick }: PricingSectionProps) => {
               <h3 className="font-display text-2xl font-semibold text-foreground mb-2">
                 Personal Math Session
               </h3>
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="font-display text-5xl font-bold text-foreground">
-                  ₦3,000
-                </span>
+              <div className="flex flex-col items-center justify-center gap-1">
+                {isReferred && (
+                  <div className="flex items-center gap-1.5 px-3 py-1 bg-primary/10 rounded-full mb-2 border border-primary/20 animate-pulse">
+                    <Sparkles className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-[10px] font-bold text-primary uppercase tracking-wider">Referral Discount Applied</span>
+                  </div>
+                )}
+                <div className="flex items-baseline gap-2">
+                  {isReferred ? (
+                    <>
+                      <span className="font-display text-2xl text-muted-foreground line-through opacity-50">
+                        ₦{originalPrice.toLocaleString()}
+                      </span>
+                      <span className="font-display text-5xl font-bold text-primary drop-shadow-[0_0_15px_rgba(234,30,103,0.3)]">
+                        ₦{discountedPrice.toLocaleString()}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="font-display text-5xl font-bold text-foreground">
+                      ₦{originalPrice.toLocaleString()}
+                    </span>
+                  )}
+                </div>
               </div>
             </CardHeader>
 

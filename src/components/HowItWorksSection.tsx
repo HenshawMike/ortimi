@@ -5,6 +5,7 @@ const steps = [
   { number: "01", text: "Choose a session" },
   { number: "02", text: "Pay ₦3,000" },
   { number: "03", text: "Meet for a focused one-on-one lesson" },
+  { number: "04", text: "Refer a friend and get 10% off!" },
 ];
 
 const HowItWorksSection = () => {

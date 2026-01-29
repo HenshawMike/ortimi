@@ -23,7 +23,7 @@ const FloatingSymbols = () => {
   const [scrollY, setScrollY] = useState(0);
 
   // Generate symbols once on component mount
-  const symbols = useMemo(() => generateRandomSymbols(35), []);
+  const symbols = useMemo(() => generateRandomSymbols(45), []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,20 +37,26 @@ const FloatingSymbols = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {symbols.map((item, index) => (
-        <span
+        <div
           key={index}
-          className={`floating-symbol ${item.size} font-display`}
+          className="absolute pointer-events-none select-none"
           style={{
             top: item.top,
             left: item.left,
-            animationDelay: `${item.animationDelay}s`,
-            animationDuration: `${item.animationDuration}s`,
             transform: `translateY(${scrollY * item.speed}px)`,
             transition: "transform 0.1s ease-out",
           }}
         >
-          {item.symbol}
-        </span>
+          <span
+            className={`floating-symbol symbol-animation ${item.size} font-display`}
+            style={{
+              animationDelay: `${item.animationDelay}s`,
+              animationDuration: `${item.animationDuration}s`,
+            }}
+          >
+            {item.symbol}
+          </span>
+        </div>
       ))}
     </div>
   );
