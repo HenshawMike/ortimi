@@ -305,7 +305,7 @@ const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
                   Refer a Friend & Get 10% Off
                 </p>
                 <p className="text-xs text-muted-foreground mb-3">
-                  Share this link with a friend. When they book, they get 10% off! (you get 10% off by using their link)
+                  Share this link with a friend. When they book, they get 10% off! ( get 10% off by using their link)
                 </p>
 
                 <div className="bg-secondary/50 p-2 rounded border border-border mt-1 mb-4">
